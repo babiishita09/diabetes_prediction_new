@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="static">
+</head>
+
+<style>
+    body{
+    background-color:hsla(0,100%,30%,0.3);
+    }
+
+     h1{
+    text-align:center;
+    outline:5px solid blue;
+    width:400px;
+    padding: 30px;
+    border: 5px;
+    box-sizing: border-box;
+    box-radius:6px;
+    font-family:cursive;
+    font-size:25px;
+     }
+
+     img{
+     border: 3px;
+     border-radius:6px;
+     }
+
+     footer{
+     position:auto;
+     left:0;
+     bottom:0;
+     width:100%;
+     font-size:15px;
+     text-align:center;
+     font-family:cursive;
+     font-color:black;
+
+
+     }
+
+
+
+</style>
+<body>
+<center>
+{% if prediction=='positive' %}
+<img src="static/a.png" width="600px" height="600px" alt="diabetes">
+<h1>Sorry your diabetes test report is <b>POSITIVE</b>.</h1>
+{% else %}
+<img src="static/no_diabetes.jpg" width="600px" height="600px" alt="diabetes">
+<h1>Hey good news!! Your diabetes test report is <b>NEGATIVE</b>.</h1>
+{% endif %}
+
+
+    <div class="footer">
+        <footer>
+            <p><b>Made by ISHITA MAITY</b></p>
+        </footer>
+    </div>
+</center>
+</body>
+</html>

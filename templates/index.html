@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+
+    <link rel="stylesheet" href="static">
+    <style>
+
+  body {
+    background-image:
+    url("static/d.jpg");
+    background-repeat: no-repeat;
+    background-attachment:
+    fixed;
+    background-position: center;
+    background-size:cover ;
+
+   }
+
+   .main{
+   background-color:rgb(0,0,0,0.7);
+   width:600px;
+   margin:auto;
+   height:350px;
+   }
+
+
+  label{
+  right:100px;
+  position:relative;
+  padding:5px 40px;
+  box-sizing:border-box;
+  width:10%;
+  display: inline-block;
+  font-size:20px;
+  color:white;
+  }
+  input{
+  left:100px;
+  position:relative;
+  box-sizing:border-box;
+  height:20px;
+  display: inline-block;
+  border-radius:6px;
+  }
+
+  button{
+  background-color:blue;
+  display:block;
+  margin:20px 0px 0px 20px;
+  text-align:center;
+  padding:14px 110px;
+  outline:none;
+  color:white;
+  cursor:pointer;
+  transition:0.25px;
+  border-radius:6px;
+  }
+  .heading{
+  text-align:center;
+  background-color:rgb(0,0,0,0.5);
+  font-size:30px;
+  color: white;
+  font-family:Cursive;
+  }
+
+  footer{
+     position:auto;
+     left:0;
+     bottom:0;
+     width:100%;
+     font-size:15px;
+     text-align:center;
+     font-family:cursive;
+     font-color:black;
+     }
+
+   </style>
+</head>
+
+<body>
+    <div class="heading"><h1>Welcome to diabetes prediction web app</h1>
+        <p>This is a Machine Learning Diabetes Prediction web app.You can check whether you have diabetes or not.
+         Fill the below boxes and click the submit button.</p>
+
+    </div>
+
+    <br>
+
+<center class="main" >
+
+    <div class="form">
+        <form action="/predict" method="POST">
+
+
+            <label class="Pregnancies"><b>Pregnancies</b></label>
+            <input type="number" name="Pregnancies" id="Pregnancies" placeholder="Pregnancies" required="required" > <br>
+            <label class="Glucose"><b>Glucose </b></label>
+            <input type="number" name="Glucose" id="Glucose" placeholder="Glucose" required="required" > <br>
+            <label class="BloodPressure"><b>BloodPressure</b></label>
+            <input type="number" name="BloodPressure" id="BloodPressure" placeholder="BloodPressure" required="required" ><br>
+            <label class="SkinThickness"><b>SkinThickness</b></label>
+            <input type="number" name="SkinThickness" id="SkinThickness" placeholder="SkinThickness" required="required" ><br>
+            <label class="Insulin"><b>Insulin</b></label>
+            <input type="number" name="Insulin" id="Insulin" placeholder="Insulin" required="required" ><br>
+            <label class="BMI"><b>BMI</b></label>
+            <input type="number" name="BMI" id="BMI" placeholder="BMI" required="required" > <br>
+            <label class="DiabetesPedigreeFunction"><b>DiabetesPedigreeFunction</b></label>
+            <input type="number" name="DiabetesPedigreeFunction" id="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required="required" > <br>
+            <label class="Age"><b>Age</b></label>
+            <input type="number" name="Age" id="Age" placeholder="Age" required="required" ><br>
+            <button type="submit" class="submit"><b>Submit</b></button>
+            <div>
+                {{prediction}}
+            </div>
+        </form>
+
+    </div>
+    <br>
+    <div class="footer">
+        <footer>
+            <p><b>Made by ISHITA MAITY</b></p>
+        </footer>
+    </div>
+
+
+</center>
+
+</body>
+
+</html>
